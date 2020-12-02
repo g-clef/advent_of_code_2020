@@ -1,5 +1,4 @@
 import re
-inputs = list()
 
 entries = [re.compile(r"(\d+)-(\d+) (\w): (\w+)\n?").match(line).groups() for line in open("input.txt").readlines()]
 print(sum(1 for min, max, letter, pw in entries if int(min) <=pw.count(letter) <= int(max)))
