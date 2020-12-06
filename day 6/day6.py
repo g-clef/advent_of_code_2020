@@ -18,7 +18,7 @@ data = read_input()
 print(sum([len(entry) for entry in data]))
 
 
-# part 2:
+# part 2: answer 2971
 def read_input2():
     results = list()
     accumulator = None
