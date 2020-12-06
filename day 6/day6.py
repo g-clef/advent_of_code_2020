@@ -1,9 +1,11 @@
+forms = [line.strip() for line in open("input.txt").readlines()]
+
+
 # part 1 answer 6161
 def read_input():
     results = list()
     accumulator = set()
-    for line in open("input.txt").readlines():
-        line = line.strip()
+    for line in forms:
         if not line:
             results.append(accumulator)
             accumulator = set()
@@ -22,8 +24,7 @@ print(sum([len(entry) for entry in data]))
 def read_input2():
     results = list()
     accumulator = None
-    for line in open("input.txt").readlines():
-        line = line.strip()
+    for line in forms:
         if not line:
             results.append(accumulator)
             accumulator = None
