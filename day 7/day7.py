@@ -56,7 +56,7 @@ def traverse_graph_weights(graph, base_node):
             weight = int(graph.get_edge_data(start_node, end_node)['weight'])
             print(f"weight is {weight}")
             # this is the weight of the contents
-            path_weight = weight*(1 + path_weight)
+            path_weight = weight*path_weight
             print(f"total so far {path_weight}")
         total += path_weight
     return total
